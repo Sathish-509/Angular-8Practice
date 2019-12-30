@@ -1,2 +1,6 @@
 <h2>This is the server component.</h2>
+<p>Server Name: {{ ServerName }}</p>
+<p>Server Pid: {{ ServerPid }}</p>
+<p>Server Status: {{ ServerStatus }}</p>
+<button [disabled]="buttonState" (click)="toggleServerStatus()">Toggle Server Status</button>
 <app-sub-server></app-sub-server>
