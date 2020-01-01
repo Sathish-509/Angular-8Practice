@@ -1,20 +1,10 @@
+<app-header></app-header>
 <div class="container">
-<label for="fName">First Name: </label>
-<input type="text" name="fName" [(ngModel)]="name"/>
-<input type="text" name="fName" [ngModel]="name"/>
-<p>{{ name }}</p>
+    <div class="row">
+        <div class="col-md-12">
+            <app-recipe-list></app-recipe-list>
+            <app-recipe-detail></app-recipe-detail>
+            <app-shopping-list></app-shopping-list>
+        </div>
+    </div>
 </div>
-
-<h1 [ngStyle]="{color: getColor()}">Below is the example of ngif, which internally serves ngstyle</h1>
-<h2 [ngClass]="{white: flag}">This is example of ngclass</h2>
-<p *ngIf="flag; else elseblock">Flag is true</p>
-<ng-template #elseblock>
-    <p>Flag is false</p>
-</ng-template>
-<button (click)="toggleFlag()">Toggle Flag</button>
-<app-server></app-server>
-
-<h3>Example of ngFor</h3>
-<input type="text" placeholder="name" [(ngModel)]="currentName"/>
-<button (click)="addStudent()">Add Student</button>
-<li *ngFor="let name of studentsList"> {{name}} </li>
